@@ -92,13 +92,13 @@ export default function Weather() {
       <hr />
       <div className="row">
         <div className="col-4">
-           <i className="far fa-sun" width="100px"></i>
+           <i className="far fa-sun"></i>
         </div>
         <div className="col-4">
-           <i className="far fa-moon" width="100px"></i>
+           <i className="far fa-moon"></i>
         </div>
         <div className="col-4">
-          <i className="fas fa-thermometer-quarter" width="100px"></i>
+          <i className="fas fa-thermometer-quarter" width="400px"></i>
         </div>
       </div>
       <div className="row">
