@@ -1,38 +1,93 @@
-.App {
+footer {
+  text-align: center;
+  line-height: 15pt;
+}
+
+i.fa-cloud-sun {
+  color: rgb(139, 137, 137);
+  font-size: 50pt;
+  text-align: center;
+  line-height: 70pt;
+}
+
+i.fa-sun {
+  color: rgb(139, 137, 137);
+  font-size: 50pt;
+  text-align: center;
+  line-height: 70pt;
+}
+
+i.fa-bolt {
+  color: rgb(139, 137, 137);
+  font-size: 50pt;
+  text-align: center;
+  line-height: 70pt;
+}
+
+i.fa-cloud-rain {
+  color: rgb(139, 137, 137);
+  font-size: 50pt;
+  text-align: center;
+  line-height: 70pt;
+}
+
+i.fa-search {
+  color: white;
+  font-size: 12pt;
+}
+
+i.fa-thermometer-quarter {
+  font-size: 90px;
+  color: blue;
+  font-size: 40pt;
+  position: relative;
+  padding: 30px;
+}
+
+img.icon {
+  width: 175px;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-weight: bold;
+  color: rgb(92, 88, 88);
+}
+
+h2.currently {
+  font-size: 18pt;
+  color: rgb(92, 88, 88);
+  font-weight: bold;
+  line-height: 30pt;
+  padding-top: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+i.fa-clock {
+  color: #5c5858;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul.main-list {
+  text-align: right;
+  margin-right: 10px;
+  margin-left: -30px;
+  text-transform: capitalize;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+section.fourth-row {
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1.searchedCity {
+  color: #0278ae;
+  font-size: 40pt;
+  font-weight: bold;
+  line-height: 30pt;
+  padding: 0px 0px 18px 0px;
+  text-align: center;
 }

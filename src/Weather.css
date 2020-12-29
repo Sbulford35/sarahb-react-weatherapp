@@ -1,0 +1,74 @@
+.Weather {
+  background-color: #d9ecf2;
+  border: 1px solid #0278ae;
+  border-radius: 10px;
+  color: #2d2e30;
+  font-family: "Montserrat", sans-serif;
+  margin: 25px auto;
+  max-width: 600px;
+  padding: 25px;
+  margin-bottom: 10px;
+}
+
+.Weather .temperature {
+  color: #0278ae;
+  font-size: 30pt;
+  font-weight: bold;
+  line-height: 50pt;
+  position: relative;
+  margin-left: -25px;
+}
+
+.Weather .mostly {
+  color: #0278ae;
+  font-size: 30pt;
+  font-weight: bold;
+  line-height: 30pt;
+  position: relative;
+  margin-left: -15px;
+  text-transform: capitalize;
+}
+
+.Weather .units {
+  position: relative;
+  top: -15px;
+  font-weight: normal;
+}
+
+.Weather .current-sky .active {
+  color: rgb(92, 88, 88);
+  cursor: default;
+}
+
+.Weather .current-sky .active:hover {
+  text-decoration: none;
+}
+
+.Weather .today {
+  font-size: 20pt;
+  color: #0278ae;
+  font-weight: bold;
+}
+
+.Weather .time {
+  font-size: 14pt;
+  color: rgb(92, 88, 88);
+  line-height: -20pt;
+}
+
+.Weather .col-4 {
+  color: rgb(92, 88, 88);
+  font-weight: bold;
+  text-align: center;
+}
+
+.Weather .hourly-icon {
+  margin-left: -20px;
+}
+
+.Weather .hourly-forecast {
+  color: #0278ae;
+  font-weight: bold;
+  text-align: center;
+  margin: 0px 9.5px 0px 9.5px;
+}
