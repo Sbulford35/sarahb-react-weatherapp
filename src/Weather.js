@@ -15,7 +15,7 @@ export default function Weather() {
     sunrise: "6:48",
     sunset: "7:02",
     pressure: "Low",
-    img: <i className="fas fa-sun" width="100px"></i>
+    icon: "fas fa-sun"
   };
 
   return (
@@ -78,12 +78,7 @@ export default function Weather() {
           </div>
         </div>
         <div className="col-3">
-          <img
-            src={weatherData.img}
-            alt="weather-icon"
-            width="150px"
-            className="icon"
-          />
+          <i class="fas fa-sun" width="150px"></i>
         </div>
         <div className="col-5">
           <ul className="main-list">
@@ -97,10 +92,10 @@ export default function Weather() {
       <hr />
       <div className="row">
         <div className="col-4">
-           <i className="fas fa-sunrise" width="100px"></i>
+           <i className="far fa-sun" width="100px"></i>
         </div>
         <div className="col-4">
-           <i className="fas fa-sunset" width="100px"></i>
+           <i className="far fa-moon" width="100px"></i>
         </div>
         <div className="col-4">
           <i className="fas fa-thermometer-quarter" width="100px"></i>

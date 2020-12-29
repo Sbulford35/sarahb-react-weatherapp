@@ -3,34 +3,6 @@ footer {
   line-height: 15pt;
 }
 
-i.fa-cloud-sun {
-  color: rgb(139, 137, 137);
-  font-size: 50pt;
-  text-align: center;
-  line-height: 70pt;
-}
-
-i.fa-sun {
-  color: rgb(139, 137, 137);
-  font-size: 50pt;
-  text-align: center;
-  line-height: 70pt;
-}
-
-i.fa-bolt {
-  color: rgb(139, 137, 137);
-  font-size: 50pt;
-  text-align: center;
-  line-height: 70pt;
-}
-
-i.fa-cloud-rain {
-  color: rgb(139, 137, 137);
-  font-size: 50pt;
-  text-align: center;
-  line-height: 70pt;
-}
-
 i.fa-search {
   color: white;
   font-size: 12pt;
@@ -44,7 +16,7 @@ i.fa-thermometer-quarter {
   padding: 30px;
 }
 
-img.icon {
+i.fa-sun {
   width: 175px;
   margin-left: -10px;
   margin-top: -20px;
