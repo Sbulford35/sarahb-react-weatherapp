@@ -5,8 +5,8 @@ export default function Weather() {
   let weatherData = {
     city: "Duryea",
     currently: "Sunny",
-    date: "Tue, December 8, 2020",
-    time: "5:00",
+    date: "Mon, December 28, 2020",
+    time: "9:30",
     temperature: "63",
     feelsLike: "44",
     low: "36",

@@ -3,6 +3,10 @@ footer {
   line-height: 15pt;
 }
 
+p {
+  text-align: center;
+}
+
 i.fa-search {
   color: white;
   font-size: 12pt;
