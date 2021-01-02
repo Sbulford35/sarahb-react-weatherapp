@@ -20,14 +20,20 @@ i.fa-thermometer-quarter {
   padding: 30px;
 }
 
-i.fa-sun {
+i.fasFa-sun {
   font-size: 40pt;
   margin-left: 40px;
   margin-top: 15px;
 }
 
-i.fa-moon {
+i.farFa-sun {
   font-size: 40pt;
+  margin-left: 40px;
+  margin-top: 15px;
+}
+
+i.farFa-moon {
+  font-size: 30pt;
   margin-left: -10px;
   margin-top: 15px;
 }

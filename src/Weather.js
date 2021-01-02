@@ -78,7 +78,7 @@ export default function Weather() {
           </div>
         </div>
         <div className="col-3">
-          <i class="fas fa-sun" width="150px"></i>
+          <i className="fas fa-sun" width="150px"></i>
         </div>
         <div className="col-5">
           <ul className="main-list">
