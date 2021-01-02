@@ -1,5 +1,7 @@
 import React from "react";
 import "./Weather.css";
+import "./App.css";
+import App from "./App";
 
 export default function Weather() {
   let weatherData = {
@@ -108,5 +110,5 @@ export default function Weather() {
       </div>
       <hr />
     </div>
-  );
+    );
 }
