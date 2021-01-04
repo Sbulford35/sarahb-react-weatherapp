@@ -3,13 +3,13 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-    const [ready, setReady] = useState(false);
-    const [weatherData, setWeatherData] = useState({});
+    const [weatherData, setWeatherData] = useState({ ready: false });
     
     
     function handleResponse(response) {
         console.log(response.data);
         setWeatherData({
+        ready: true,
         temperature: response.data.main.temp,
         city: response.data.main.name,
         currently: response.weather[0].description,
@@ -23,15 +23,13 @@ export default function Weather() {
         sunset: response.data.sys.sunset,
         pressure: response.data.main.pressure,
         });
-
-        setReady(true);
     }
 
-    if (ready) {
+    if (weatherData.ready) {
 return (
     <div className="Weather">
       <p>
-        <span className="today">Mon, December 28, 2020</span>
+        <span className="today">{weatherData.date}</span>
         <br />
         <span className="time">
           <i className="far fa-clock"></i> Last Updated at 9:30pm
