@@ -3,6 +3,12 @@ footer {
   line-height: 15pt;
 }
 
+.col-3 i.fa-sun {
+  font-size: 40pt;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
 p {
   text-align: center;
 }
@@ -20,20 +26,14 @@ i.fa-thermometer-quarter {
   padding: 30px;
 }
 
-i.fasFa-sun {
+i.fa-sun {
   font-size: 40pt;
-  margin-left: 40px;
+  margin-left: px;
   margin-top: 15px;
 }
 
-i.farFa-sun {
+i.fa-moon {
   font-size: 40pt;
-  margin-left: 40px;
-  margin-top: 15px;
-}
-
-i.farFa-moon {
-  font-size: 30pt;
   margin-left: -10px;
   margin-top: 15px;
 }
