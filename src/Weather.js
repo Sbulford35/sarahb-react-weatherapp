@@ -12,7 +12,7 @@ export default function Weather() {
         setWeatherData({
         temperature: response.data.main.temp,
         city: response.data.main.name,
-        currently: "Sunny",
+        currently: response.weather[0].description,
         date: "Mon, December 28, 2020",
         time: "9:30",
         feelsLike: response.data.main.feels_like,
@@ -68,7 +68,7 @@ return (
       <div className="row">
         <div className="col-4">
           <div className="current-sky">
-            <span className="mostly">{weatherData.currently}</span>
+            <span className="now">{weatherData.currently}</span>
             <br />
             <span className="temperature">
               {" "}
