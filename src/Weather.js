@@ -1,7 +1,11 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+    const apiKey = "738213e2d75e5700ee8029528ef19c1a";
+    let city = "Duryea";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   let weatherData = {
     city: "Duryea",
     currently: "Sunny",
