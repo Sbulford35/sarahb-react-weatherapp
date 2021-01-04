@@ -16,16 +16,16 @@
   font-weight: bold;
   line-height: 50pt;
   position: relative;
-  margin-left: -45px;
+  margin-left: -60px;
 }
 
 .Weather .now {
   color: #0278ae;
-  font-size: 30pt;
+  font-size: 20pt;
   font-weight: bold;
   line-height: 32pt;
   position: relative;
-  margin-left: -30px;
+  margin-left: -10px;
   text-transform: capitalize;
 }
 

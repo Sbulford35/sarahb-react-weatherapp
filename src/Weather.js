@@ -69,7 +69,7 @@ return (
         <div className="col-4">
           <div className="current-sky">
             <span className="now">{weatherData.currently}</span>
-            <br />
+        <br />
             <span className="temperature">
               {" "}
               <strong>{Math.round(weatherData.temperature)}</strong>
