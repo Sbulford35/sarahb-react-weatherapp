@@ -1,34 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-    const apiKey = "738213e2d75e5700ee8029528ef19c1a";
-    let city = "Duryea";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-  let weatherData = {
-    city: "Duryea",
-    currently: "Sunny",
-    date: "Mon, December 28, 2020",
-    time: "9:30",
-    temperature: "63",
-    feelsLike: "44",
-    low: "36",
-    humidity: "34",
-    wind: "10",
-    sunrise: "6:48",
-    sunset: "7:02",
-    pressure: "Low",
-    icon: "fas fa-sun"
-  };
+    const [ready, setReady] = useState(false);
+    const [weatherData, weatherData] = useState(null);
+    
+    
+    function handleResponse(response) {
+        console.log(response.data);
+        setTemperature(response.data.main.temp);
+        setReady(true);
+    }
 
-  return (
+    if (ready) {
+return (
     <div className="Weather">
       <p>
-        <span className="today">{weatherData.date}</span>
+        <span className="today">Mon, December 28, 2020</span>
         <br />
         <span className="time">
-          <i className="far fa-clock"></i> Last Updated at {weatherData.time}pm
+          <i className="far fa-clock"></i> Last Updated at 9:30pm
         </span>
       </p>
       <form>
@@ -56,17 +48,17 @@ export default function Weather() {
       <h2 className="currently">
         <em>Your current weather in</em>
       </h2>
-      <h1 className="searchedCity">{weatherData.city}</h1>
+      <h1 className="searchedCity">Duryea</h1>
       <hr />
       <br />
       <div className="row">
         <div className="col-4">
           <div className="current-sky">
-            <span className="mostly">{weatherData.currently}</span>
+            <span className="mostly">Sunny</span>
             <br />
             <span className="temperature">
               {" "}
-              <strong>{weatherData.temperature}</strong>
+              <strong>{Math.round(temperature)}</strong>
             </span>
             <span className="units">
               <a href="/" className="active">
@@ -86,10 +78,10 @@ export default function Weather() {
         </div>
         <div className="col-5">
           <ul className="main-list">
-            <li className="feel">Feels like: {weatherData.feelsLike}°F</li>
-            <li className="low">Today's Low: {weatherData.low}°F</li>
-            <li className="humidity">Humidity: {weatherData.humidity}%</li>
-            <li className="wind">Wind: {weatherData.wind}mph</li>
+            <li className="feel">Feels like: 44°F</li>
+            <li className="low">Today's Low: 36°F</li>
+            <li className="humidity">Humidity: 34%</li>
+            <li className="wind">Wind: 10mph</li>
           </ul>
         </div>
       </div>
@@ -106,11 +98,19 @@ export default function Weather() {
         </div>
       </div>
       <div className="row">
-        <div className="col-4">Sunrise: {weatherData.sunrise}am</div>
-        <div className="col-4">Sunset: {weatherData.sunset}pm</div>
-        <div className="col-4">Pressure: {weatherData.pressure}</div>
+        <div className="col-4">Sunrise: 6:48am</div>
+        <div className="col-4">Sunset: 7:02pm</div>
+        <div className="col-4">Pressure: Low</div>
       </div>
       <hr />
     </div>
     );
+}else{
+    const apiKey = "738213e2d75e5700ee8029528ef19c1a";
+    let city = "Duryea";
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
+    return "Loading. . .";
+  }
 }
