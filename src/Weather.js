@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ ready: false });
     
     
@@ -12,7 +12,7 @@ export default function Weather() {
         ready: true,
         temperature: response.data.main.temp,
         city: response.data.main.name,
-        currently: response.weather[0].description,
+        currently: response.data.weather[0].description,
         date: "Mon, December 28, 2020",
         time: "9:30",
         feelsLike: response.data.main.feels_like,
@@ -21,7 +21,7 @@ export default function Weather() {
         wind: response.data.wind.speed,
         sunrise: response.data.sys.sunrise,
         sunset: response.data.sys.sunset,
-        pressure: response.data.main.pressure,
+        pressure: response.data.main.pressure
         });
     }
 
@@ -32,7 +32,7 @@ return (
         <span className="today">{weatherData.date}</span>
         <br />
         <span className="time">
-          <i className="far fa-clock"></i> Last Updated at 9:30pm
+          <i className="far fa-clock"></i> {weatherData.time}
         </span>
       </p>
       <form>
@@ -119,8 +119,7 @@ return (
     );
 }else{
     const apiKey = "738213e2d75e5700ee8029528ef19c1a";
-    let city = "Duryea";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading. . .";
