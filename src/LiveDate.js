@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./LiveDate.css";
+
 export default function LiveDate(props) {
     
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -22,6 +24,6 @@ export default function LiveDate(props) {
     }
 
     return (
-        <div className="LiveDate">{day}, {month} {dayOfMonth}, {year} <br /><i className="far fa-clock"></i> Last updated at {hours}:{minutes}</div>
+        <div className="LiveDate"><h1>{day}, {month} {dayOfMonth}, {year}</h1><br /><p><i className="far fa-clock"></i> Last updated at {hours}:{minutes}</p></div>
     );
 }

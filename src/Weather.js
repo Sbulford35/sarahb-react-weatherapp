@@ -29,9 +29,7 @@ export default function Weather(props) {
     if (weatherData.ready) {
 return (
     <div className="Weather">
-      <p>
         <span className="today"><LiveDate date={weatherData.date} /></span>
-      </p>
       <form>
         <div className="row">
           <div className="col-6">

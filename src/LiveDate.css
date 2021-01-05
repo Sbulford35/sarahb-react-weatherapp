@@ -1,0 +1,11 @@
+.LiveDate .h1 {
+  font-size: 20pt;
+  color: #0278ae;
+  font-weight: bold;
+}
+
+.LiveDate .p {
+  font-size: 14pt;
+  color: rgb(92, 88, 88);
+  line-height: -20pt;
+}
