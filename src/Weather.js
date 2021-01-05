@@ -15,8 +15,7 @@ export default function Weather(props) {
         temperature: response.data.main.temp,
         city: response.data.main.name,
         currently: response.data.weather[0].description,
-        date: new Date(response.data.dt * 1000),
-        time: "9:30",
+        date: new Date(response.data.dt * 1000), 
         feelsLike: response.data.main.feels_like,
         low: response.data.main.temp_min,
         humidity: response.data.main.humidity,
@@ -32,10 +31,6 @@ return (
     <div className="Weather">
       <p>
         <span className="today"><LiveDate date={weatherData.date} /></span>
-        <br />
-        <span className="time">
-          <i className="far fa-clock"></i> {weatherData.time}
-        </span>
       </p>
       <form>
         <div className="row">
