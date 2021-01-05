@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LiveDate from "./LiveDate";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import "./Weather.css";
@@ -14,7 +15,7 @@ export default function Weather(props) {
         temperature: response.data.main.temp,
         city: response.data.main.name,
         currently: response.data.weather[0].description,
-        date: "Mon, December 28, 2020",
+        date: new Date(response.data.dt * 1000),
         time: "9:30",
         feelsLike: response.data.main.feels_like,
         low: response.data.main.temp_min,
@@ -30,7 +31,7 @@ export default function Weather(props) {
 return (
     <div className="Weather">
       <p>
-        <span className="today">{weatherData.date}</span>
+        <span className="today"><LiveDate date={weatherData.date} /></span>
         <br />
         <span className="time">
           <i className="far fa-clock"></i> {weatherData.time}
