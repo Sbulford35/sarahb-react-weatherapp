@@ -114,7 +114,7 @@ return (
     );
 }else{
     const apiKey = "738213e2d75e5700ee8029528ef19c1a";
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
 
         return <Loader type="Rings" color="orange" height={100} width={100} />;
