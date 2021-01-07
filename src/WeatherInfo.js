@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WeatherInfo(props) {
     return (
-        <div className="WeatherInfo">
+        <div className="WeatherCurrent">
          <h2 className="currently">
           <em>Your current weather in</em>
         </h2>
