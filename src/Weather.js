@@ -7,13 +7,14 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
 function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
-      city: response.data.main.name,
+      city: response.data.name,
       currently: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
       feelsLike: response.data.main.feels_like,
@@ -26,13 +27,28 @@ function handleResponse(response) {
     });
   }
 
+function search() {
+const apiKey = "738213e2d75e5700ee8029528ef19c1a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  search();
+}
+
+function handleCityChange(event) {
+setCity(event.target.value);
+}
+
 if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className>
           <LiveDate date={weatherData.date} />
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-6">
               <input
@@ -40,6 +56,8 @@ if (weatherData.ready) {
                 className="form-control"
                 placeholder="Enter city here..."
                 autoComplete="off"
+                autoFocus="on"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-3">
@@ -58,10 +76,7 @@ if (weatherData.ready) {
       </div>
     );
   } else {
-    const apiKey = "738213e2d75e5700ee8029528ef19c1a";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
-
+search();
     return <Loader type="Rings" color="orange" height={100} width={100} />;
   }
 }
