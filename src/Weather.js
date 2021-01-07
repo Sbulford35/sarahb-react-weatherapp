@@ -3,11 +3,11 @@ import LiveDate from "./LiveDate";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import "./Weather.css";
-​
+
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-​
-  function handleResponse(response) {
+
+function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
@@ -24,11 +24,11 @@ export default function Weather(props) {
       pressure: response.data.main.pressure,
     });
   }
-​
-  if (weatherData.ready) {
+
+if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="today">
+        <div className>
           <LiveDate date={weatherData.date} />
         </div>
         <form>
@@ -121,7 +121,7 @@ export default function Weather(props) {
     const apiKey = "738213e2d75e5700ee8029528ef19c1a";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
-​
+
     return <Loader type="Rings" color="orange" height={100} width={100} />;
   }
 }

@@ -44,18 +44,6 @@
   text-decoration: none;
 }
 
-.Weather .today {
-  font-size: 20pt;
-  color: #0278ae;
-  font-weight: bold;
-}
-
-.Weather .time {
-  font-size: 14pt;
-  color: rgb(92, 88, 88);
-  line-height: -20pt;
-}
-
 .Weather .col-4 {
   color: rgb(92, 88, 88);
   font-weight: bold;

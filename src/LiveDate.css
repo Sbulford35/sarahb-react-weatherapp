@@ -1,11 +1,12 @@
-.LiveDate .h1 {
-  font-size: 20pt;
+.LiveDate h1 {
+  font-size: 25pt;
   color: #0278ae;
   font-weight: bold;
+  text-align: center;
 }
 
-.LiveDate .p {
-  font-size: 14pt;
+.LiveDate p {
+  font-size: 20pt;
   color: rgb(92, 88, 88);
   line-height: -20pt;
 }

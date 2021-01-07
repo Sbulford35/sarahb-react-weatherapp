@@ -1,7 +1,7 @@
 import React from "react";
-​
+
 import "./LiveDate.css";
-​
+
 export default function LiveDate(props) {
   let days = [
     "Sunday",
@@ -13,9 +13,9 @@ export default function LiveDate(props) {
     "Saturday",
   ];
   let day = days[props.date.getDay()];
-​
+
   let dayOfMonth = props.date.getDate();
-​
+
   let months = [
     "January",
     "February",
@@ -31,9 +31,9 @@ export default function LiveDate(props) {
     "December",
   ];
   let month = months[props.date.getMonth()];
-​
+
   let year = props.date.getFullYear();
-​
+
   let hours = props.date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -42,13 +42,12 @@ export default function LiveDate(props) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-​
+
   return (
     <div className="LiveDate">
       <h1>
         {day}, {month} {dayOfMonth}, {year}
       </h1>
-      <br />
       <p>
         <i className="far fa-clock"></i> Last updated at {hours}:{minutes}
       </p>
