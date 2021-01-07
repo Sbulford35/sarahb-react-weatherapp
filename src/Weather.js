@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LiveDate from "./LiveDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import "./Weather.css";
@@ -53,68 +54,7 @@ if (weatherData.ready) {
             </div>
           </div>
         </form>
-        <h2 className="currently">
-          <em>Your current weather in</em>
-        </h2>
-        <h1 className="searchedCity">{weatherData.city}</h1>
-        <hr />
-        <br />
-        <div className="row">
-          <div className="col-4">
-            <div className="current-sky">
-              <span className="now">{weatherData.currently}</span>
-              <br />
-              <span className="temperature">
-                {" "}
-                <strong>{Math.round(weatherData.temperature)}</strong>
-              </span>
-              <span className="units">
-                <a href="/" className="active">
-                  {" "}
-                  <strong>°F</strong>{" "}
-                </a>{" "}
-                |{" "}
-                <a href="/" className="active">
-                  {" "}
-                  <strong>°C</strong>{" "}
-                </a>
-              </span>
-            </div>
-          </div>
-          <div className="col-3">
-            <i className="far fa-sun"></i>
-          </div>
-          <div className="col-5">
-            <ul className="main-list">
-              <li className="feel">
-                Feels like: {Math.round(weatherData.feelsLike)}°F
-              </li>
-              <li className="low">
-                Today's Low: {Math.round(weatherData.low)}°F
-              </li>
-              <li className="humidity">Humidity: {weatherData.humidity}%</li>
-              <li className="wind">Wind: {Math.round(weatherData.wind)} MPH</li>
-            </ul>
-          </div>
-        </div>
-        <hr />
-        <div className="row">
-          <div className="col-4">
-            <i className="far fa-sun"></i>
-          </div>
-          <div className="col-4">
-            <i className="far fa-moon"></i>
-          </div>
-          <div className="col-4">
-            <i className="fas fa-thermometer-quarter" width="400px"></i>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-4">Sunrise: {weatherData.sunrise}am</div>
-          <div className="col-4">Sunset: {weatherData.sunset}pm</div>
-          <div className="col-4">Pressure: {weatherData.pressure}</div>
-        </div>
-        <hr />
+        <WeatherInfo data={weatherData}/>
       </div>
     );
   } else {
