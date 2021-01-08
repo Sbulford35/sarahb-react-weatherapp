@@ -1,7 +1,9 @@
 import React from "react";
+import Sunrise from "./Sunrise";
+import Sunset from "./Sunset";
 
 export default function WeatherInfo(props) {
-    return (
+ return (
         <div className="WeatherCurrent">
          <h2 className="currently">
           <em>Your current weather in</em>
@@ -60,9 +62,9 @@ export default function WeatherInfo(props) {
           </div>
         </div>
         <div className="row">
-          <div className="col-4">Sunrise: {props.data.sunrise}am</div>
-          <div className="col-4">Sunset: {props.data.sunset}pm</div>
-          <div className="col-4">Pressure: {props.data.pressure}</div>
+          <div className="col-4"><Sunrise date={props.data.sunrise} /></div>
+          <div className="col-4"><Sunset date={props.data.sunset} /></div>
+          <div className="col-4">Wind: {Math.round(props.data.pressure)} MB</div>
         </div>
         <hr />
         </div>

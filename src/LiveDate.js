@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./LiveDate.css";
 
 export default function LiveDate(props) {

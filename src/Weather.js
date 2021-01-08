@@ -22,7 +22,7 @@ function handleResponse(response) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       sunrise: new Date(response.data.sys.sunrise * 1000),
-      sunset: response.data.sys.sunset,
+      sunset: new Date(response.data.sys.sunset * 1000),
       pressure: response.data.main.pressure,
     });
   }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./SunriseSet.css";
 
-export default function Sunrise(props) {
+export default function Sunset(props) {
 
 let hours = props.date.getHours();
   if (hours < 10) {
@@ -13,11 +13,10 @@ let hours = props.date.getHours();
  }
 
   return (
-    <div className="Sunrise">
+    <div className="Sunset">
       <p>
-        Sunrise: {hours}:{minutes}am
+        Sunset: {hours}:{minutes}pm
       </p>
       </div>
   );
 }
-        
