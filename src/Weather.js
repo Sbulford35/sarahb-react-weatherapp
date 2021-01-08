@@ -21,7 +21,7 @@ function handleResponse(response) {
       low: response.data.main.temp_min,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
-      sunrise: response.data.sys.sunrise,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: response.data.sys.sunset,
       pressure: response.data.main.pressure,
     });
