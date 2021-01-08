@@ -1,7 +1,7 @@
 import React from "react";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
-import WeatherIcon from "./WeatherIcon"
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
  return (
@@ -13,10 +13,12 @@ export default function WeatherInfo(props) {
         <hr />
         <br />
         <div className="row">
-          <div className="col-4">
+          <div className="col-5">
             <div className="current-sky">
               <span className="now">{props.data.currently}</span>
               <br />
+              </div>
+              <div className="main-temp">
               <span className="temperature">
                 {" "}
                 <strong>{Math.round(props.data.temperature)}</strong>
@@ -34,9 +36,9 @@ export default function WeatherInfo(props) {
               </span>
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-2">
               <div className="float-left">
-              <WeatherIcon code={props.data.icon} alt={props.data.description} />
+              <WeatherIcon code={props.data.icon} />
               </div>
           </div>
           <div className="col-5">
@@ -67,7 +69,7 @@ export default function WeatherInfo(props) {
         <div className="row">
           <div className="col-4"><Sunrise date={props.data.sunrise} /></div>
           <div className="col-4"><Sunset date={props.data.sunset} /></div>
-          <div className="col-4">Wind: {Math.round(props.data.pressure)}</div>
+          <div className="col-4">Pressure: <br />{props.data.pressure} MB</div>
         </div>
         <hr />
         </div>

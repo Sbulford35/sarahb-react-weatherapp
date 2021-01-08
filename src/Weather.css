@@ -1,3 +1,11 @@
+.Weather .float-left canvas {
+  height: 45pt;
+  width: 45pt;
+  margin-left: 10px;
+  margin-top: 15px;
+  display: block;
+}
+
 .Weather {
   background-color: #d9ecf2;
   border: 1px solid #0278ae;
@@ -14,18 +22,17 @@
   color: #0278ae;
   font-size: 30pt;
   font-weight: bold;
-  line-height: 50pt;
+  line-height: 35pt;
   position: relative;
-  margin-left: -60px;
+  margin-left: -90px;
 }
 
-.Weather .now {
+.Weather .current-sky {
   color: #0278ae;
   font-size: 20pt;
   font-weight: bold;
-  line-height: 32pt;
-  position: relative;
-  margin-left: -10px;
+  line-height: 22pt;
+  margin-left: 10px;
   text-transform: capitalize;
 }
 
@@ -59,4 +66,11 @@
   font-weight: bold;
   text-align: center;
   margin: 0px 9.5px 0px 9.5px;
+}
+
+.Weather .main-temp {
+  color: rgb(92, 88, 88);
+  font-weight: bold;
+  font-size: 14pt;
+  text-align: center;
 }
