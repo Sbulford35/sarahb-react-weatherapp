@@ -1,7 +1,7 @@
 import React from "react";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
-import WeatherIcon from "./WeatherIcon";
+import WeatherIcon from "./WeatherIcon"
 
 export default function WeatherInfo(props) {
  return (
