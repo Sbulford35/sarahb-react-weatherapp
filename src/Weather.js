@@ -45,7 +45,7 @@ setCity(event.target.value);
 if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className>
+        <div>
           <LiveDate date={weatherData.date} />
         </div>
         <form onSubmit={handleSubmit}>
