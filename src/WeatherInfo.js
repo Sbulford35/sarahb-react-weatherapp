@@ -1,6 +1,7 @@
 import React from "react";
 import Sunrise from "./Sunrise";
 import Sunset from "./Sunset";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
  return (
@@ -34,7 +35,9 @@ export default function WeatherInfo(props) {
             </div>
           </div>
           <div className="col-3">
-            <i className="far fa-sun"></i>
+              <div className="float-left">
+              <WeatherIcon code={props.data.icon} alt={props.data.description} />
+              </div>
           </div>
           <div className="col-5">
             <ul className="main-list">
