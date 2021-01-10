@@ -1,8 +1,15 @@
 .WeatherForecast {
   text-align: center;
   margin: 20px 0;
+  font-weight: bold;
+  color: rgb(92, 88, 88);
+  font-weight: bold;
+  text-align: center;
+  font-size: 14pt;
 }
 
 .WeatherForecast canvas {
   display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
