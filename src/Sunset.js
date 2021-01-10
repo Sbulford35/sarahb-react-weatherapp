@@ -15,7 +15,8 @@ let hours = props.date.getHours();
   return (
     <div className="Sunset">
       <p>
-        Sunset: {hours}:{minutes}pm
+        Sunset:<br />
+        {hours}:{minutes}pm
       </p>
       </div>
   );

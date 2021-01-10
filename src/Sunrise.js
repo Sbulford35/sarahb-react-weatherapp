@@ -15,7 +15,9 @@ let hours = props.date.getHours();
   return (
     <div className="Sunrise">
       <p>
-        Sunrise: {hours}:{minutes}am
+        Sunrise:
+        <br />
+        {hours}:{minutes}am
       </p>
       </div>
   );
