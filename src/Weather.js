@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import LiveDate from "./LiveDate";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import "./Weather.css";
@@ -74,6 +75,7 @@ if (weatherData.ready) {
           </div>
         </form>
         <WeatherInfo data={weatherData}/>
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
