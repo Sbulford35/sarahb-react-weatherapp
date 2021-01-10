@@ -15,7 +15,6 @@
   margin: 25px auto;
   max-width: 600px;
   padding: 25px;
-  margin-bottom: 10px;
 }
 
 .Weather .temperature {
@@ -23,8 +22,17 @@
   font-size: 30pt;
   font-weight: bold;
   line-height: 35pt;
+  margin-left: 8pt;
+}
+
+.Weather .unit {
+  color: rgb(92, 88, 88);
+  font-weight: bold;
+  font-size: 14pt;
   position: relative;
-  margin-left: -90px;
+  line-height: 1;
+  top: -11px;
+  margin-left: 5pt;
 }
 
 .Weather .current-sky {
@@ -34,15 +42,6 @@
   line-height: 22pt;
   margin-left: 10px;
   text-transform: capitalize;
-}
-
-.Weather .current-sky .active {
-  color: rgb(92, 88, 88);
-  cursor: default;
-}
-
-.Weather .current-sky .active:hover {
-  text-decoration: none;
 }
 
 .Weather .col-4 {
@@ -60,11 +59,4 @@
   font-weight: bold;
   text-align: center;
   margin: 0px 9.5px 0px 9.5px;
-}
-
-.Weather .main-temp {
-  color: rgb(92, 88, 88);
-  font-weight: bold;
-  font-size: 14pt;
-  text-align: center;
 }
