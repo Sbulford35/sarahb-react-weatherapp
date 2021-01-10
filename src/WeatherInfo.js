@@ -56,7 +56,7 @@ export default function WeatherInfo(props) {
         <div className="row">
           <div className="col-4"><Sunrise date={props.data.sunrise} /></div>
           <div className="col-4"><Sunset date={props.data.sunset} /></div>
-          <div className="col-4">Pressure: <br />{props.data.pressure} MB</div>
+          <div className="col-4">Pressure: <br />{props.data.pressure} KM/H</div>
         </div>
         <hr />
         </div>

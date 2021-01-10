@@ -1,8 +1,8 @@
 .Weather .float-left canvas {
-  height: 45pt;
-  width: 45pt;
-  margin-left: 10px;
-  margin-top: 15px;
+  height: 60pt;
+  width: 60pt;
+  margin-left: -5px;
+  margin-top: 10px;
   margin-bottom: 1px;
   display: block;
 }
