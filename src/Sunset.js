@@ -1,5 +1,5 @@
 import React from "react";
-import "./SunriseSet.css";
+import "./SunSet.css";
 
 export default function Sunset(props) {
 
