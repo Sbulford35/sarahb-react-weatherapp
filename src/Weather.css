@@ -36,12 +36,6 @@
   text-transform: capitalize;
 }
 
-.Weather .units {
-  position: relative;
-  top: -15px;
-  font-weight: normal;
-}
-
 .Weather .current-sky .active {
   color: rgb(92, 88, 88);
   cursor: default;
